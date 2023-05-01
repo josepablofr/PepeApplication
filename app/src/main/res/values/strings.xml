@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Pepe Application</string>
+
+    <!-- saludaApp -->
+    <string name="questionSaludaApp">¿A quién van los saludos?</string>
+    <string name="editTextButton">Nombrecito aquí</string>
+    <string name="pulsameButton">Púlsame para saludar</string>
+</resources>

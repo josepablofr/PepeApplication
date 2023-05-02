@@ -92,7 +92,7 @@ class ImcCalculatorActivity : AppCompatActivity() {
         }
         buttonCalculate.setOnClickListener {
             val result = calculateIMC()
-            navigateToResult(result as Int)
+            navigateToResult(result)
         }
     }
 
@@ -123,12 +123,14 @@ class ImcCalculatorActivity : AppCompatActivity() {
         tvAge.text = age.toString()
     }
 
-    private fun calculateIMC(): Any {
-        val imc = weight / (height/100 * height / 100)
-        return imc
+    private fun calculateIMC(): Double {
+        val df = DecimalFormat ("#.##")
+        val imc = weight / (height.toDouble()/100 * height.toDouble() / 100)
+        val result = df.format(imc).toDouble()
+        return result
     }
 
-    private fun navigateToResult(result: Int) {
+    private fun navigateToResult(result: Double) {
         val intent = Intent (this, ResultIMCActivity::class.java )
         intent.putExtra(IMC_KEY,result)
         startActivity(intent)

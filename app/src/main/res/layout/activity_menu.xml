@@ -28,6 +28,17 @@
         android:textAllCaps="false"
         app:layout_constraintTop_toBottomOf="@+id/btnSayHelloApp" />
 
+    <Button
+        android:id="@+id/btnTodoApp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:backgroundTint="@color/black"
+        android:text="To Do App"
+        android:textColor="@color/menu_colors"
+        android:textAllCaps="false"
+        app:layout_constraintTop_toBottomOf="@+id/btnCorporalWeight" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
 

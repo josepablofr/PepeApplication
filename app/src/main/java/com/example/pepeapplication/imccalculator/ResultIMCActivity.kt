@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import android.widget.TextView
+import androidx.core.content.ContextCompat
 import com.example.pepeapplication.R
 import com.example.pepeapplication.imccalculator.ImcCalculatorActivity.Companion.IMC_KEY
 
@@ -22,10 +23,43 @@ class ResultIMCActivity : AppCompatActivity() {
 
         initComponents()
         initUI(imc)
+        initListeners()
+    }
+
+    private fun initListeners() {
+        buttonRecalculate.setOnClickListener { onBackPressed() }
     }
 
     private fun initUI(imc:Double) {
         tvIMC.text = imc.toString()
+        when (imc) {
+            in 0.00..18.50 -> {
+                tvResult.text = getString(R.string.title_low_weight)
+                tvResult.setTextColor(ContextCompat.getColor(this, R.color.menu_colors))
+                tvDescription.text = getString(R.string.description_low_weight)
+            }
+            in 18.51..24.99 -> {
+                tvResult.text = getString(R.string.title_normal_weight)
+                tvResult.setTextColor(ContextCompat.getColor(this, R.color.purple_200))
+                tvDescription.text = getString(R.string.description_normal_weight)
+            }
+            in 25.00..29.99 -> {
+                tvResult.text = getString(R.string.title_obesity)
+                tvResult.setTextColor(ContextCompat.getColor(this, R.color.app_background))
+                tvDescription.text = getString(R.string.description_obesity)
+            }
+            in 30.00..99.00 -> {
+                tvResult.text = getString(R.string.title_overweight)
+                tvResult.setTextColor(ContextCompat.getColor(this, R.color.menu_colors))
+                tvDescription.text = getString(R.string.description_overweight)
+            }
+            else -> {
+                tvResult.text = "Error"
+                tvIMC.text = "Error"
+                tvResult.setTextColor(ContextCompat.getColor(this, R.color.menu_colors))
+                tvDescription.text = "Error"
+            }
+        }
     }
 
     private fun initComponents() {

@@ -5,4 +5,18 @@
     <string name="questionSaludaApp">¿A quién van los saludos?</string>
     <string name="editTextButton">Nombrecito aquí</string>
     <string name="pulsameButton">Púlsame para saludar</string>
+
+    <!-- App IMC -->
+    <string name="title_obesity">Con Obesidad</string>
+    <string name="description_obesity">Estás obeso, urge que actúes ya</string>
+
+    <string name="title_overweight">Con Sobrepeso</string>
+    <string name="description_overweight">Estás con sobrepeso hermano</string>
+
+    <string name="title_normal_weight">Peso Normal</string>
+    <string name="description_normal_weight">Estás en un rango correcto de peso</string>
+
+    <string name="title_low_weight">Bajo Peso</string>
+    <string name="description_low_weight">Estás muy abajo de tu peso</string>
+
 </resources>

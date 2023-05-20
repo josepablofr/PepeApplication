@@ -13,4 +13,11 @@
         <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
         <!-- Customize your theme here. -->
     </style>
+
+<!-- TodoSubtitle Style -->
+    <style name="TodoSubtitle">
+        <item name="textAllCaps">true</item>
+        <item name="android:textColor">#C2C8CF</item>
+        <item name="android:layout_marginHorizontal">32dp</item>
+    </style>
 </resources>

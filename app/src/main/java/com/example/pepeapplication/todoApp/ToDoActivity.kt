@@ -1,5 +1,6 @@
 package com.example.pepeapplication.todoApp
 
+import android.app.Dialog
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -28,7 +29,7 @@ class ToDoActivity : AppCompatActivity() {
     private lateinit var rvTasks: RecyclerView
     private lateinit var tasksAdapter: TaskAdapter
 
-  //  private lateinit var fabAddTask: FloatingActionButton
+    private lateinit var fabAddTask: FloatingActionButton
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -36,13 +37,13 @@ class ToDoActivity : AppCompatActivity() {
 
         initComponent()
         initUI()
-      //  initListeners()
+        initListeners()
     }
 
     private fun initComponent() {
         rvCategories = findViewById(R.id.rvCategories)
         rvTasks = findViewById(R.id.rvTasks)
-       // fabAddTask = findViewById(R.id.fabAddTask)
+        fabAddTask = findViewById(R.id.fabAddTask)
     }
 
     private fun initUI() {
@@ -55,7 +56,11 @@ class ToDoActivity : AppCompatActivity() {
         rvTasks.adapter = tasksAdapter
     }
 
-   /* private fun initListeners() {
-        TODO("Not yet implemented")
-    }  */
+   private fun initListeners() {
+        fabAddTask.setOnClickListener { showDialog() }
+    }
+
+    private fun showDialog(){
+        val dialog = Dialog(this)
+    }
 }

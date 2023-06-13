@@ -19,4 +19,11 @@
     <string name="title_low_weight">Bajo Peso</string>
     <string name="description_low_weight">Estás muy abajo de tu peso</string>
 
+    <!--TodoApp-->
+    <string name="todo_dialog_add_task">Añade la tarea</string>
+    <string name="todo_dialog_category_business">Negocios</string>
+    <string name="todo_dialog_category_personal">Personal</string>
+    <string name="todo_dialog_category_other">Other</string>
+
+
 </resources>

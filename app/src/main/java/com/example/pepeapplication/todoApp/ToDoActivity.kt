@@ -31,7 +31,7 @@ class ToDoActivity : AppCompatActivity() {
     private lateinit var categoriesAdapter: CategoriesAdapter
 
     private lateinit var rvTasks: RecyclerView
-    private lateinit var tasksAdapter: TaskAdapter
+    private lateinit var tasksAdapter: TasksAdapter
 
     private lateinit var fabAddTask: FloatingActionButton
 
@@ -90,7 +90,7 @@ class ToDoActivity : AppCompatActivity() {
         rvCategories.layoutManager = LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false)
         rvCategories.adapter = categoriesAdapter
 
-        tasksAdapter = TaskAdapter(tasks) { onItemSelected(it) }
+        tasksAdapter = TasksAdapter(tasks) { onItemSelected(it) }
         rvTasks.layoutManager = LinearLayoutManager(this)
         rvTasks.adapter = tasksAdapter
     }

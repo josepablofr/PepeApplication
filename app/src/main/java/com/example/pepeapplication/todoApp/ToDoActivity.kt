@@ -22,9 +22,10 @@ class ToDoActivity : AppCompatActivity() {
     )
 
     private val tasks = mutableListOf(
-        Task("pruebaBusiness", Business),
-        Task("pruebaPersonal", Personal),
-        Task("pruebaOther", Other)
+        Task("prueba Business", Business),
+        Task("prueba Personal", Personal),
+        Task("prueba Other", Other),
+        Task("prueba Pepe", Business)
     )
 
     private lateinit var rvCategories: RecyclerView

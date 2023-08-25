@@ -15,6 +15,9 @@
         android:theme="@style/Theme.PepeApplication"
         tools:targetApi="31">
         <activity
+            android:name=".superheroapp.DetailSuperheroActivity"
+            android:exported="false" />
+        <activity
             android:name=".superheroapp.SuperHeroListActivity"
             android:exported="false" />
         <activity

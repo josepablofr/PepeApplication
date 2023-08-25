@@ -10,13 +10,21 @@
 
     <color name="menu_colors">#95BBDA</color>
 
-<!-- ImcCalculator -->
+    <!-- ImcCalculator -->
 
     <color name="app_background">#8A2404</color>
     <color name="app_background_selected">#451202</color>
 
-<!-- SuperheroApp -->
+    <!-- SuperheroApp -->
     <color name="superhero_background_cardview">#F44336</color>
     <color name="superhero_detail_app">#773F51B5</color>
+
+
+    <color name="superhero_stat_intelligence">#03A9F4</color>
+    <color name="superhero_stat_strength">#E91E63</color>
+    <color name="superhero_stat_speed">#009688</color>
+    <color name="superhero_stat_durability">#9C27B0</color>
+    <color name="superhero_stat_power">#FF9800</color>
+    <color name="superhero_stat_combat">#4CAF50</color>
 
 </resources>
